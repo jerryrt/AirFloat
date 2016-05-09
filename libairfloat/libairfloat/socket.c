@@ -216,7 +216,7 @@ void _socket_connect(void* ctx) {
         
         log_message(LOG_ERROR, "Unable to connect (%s)", strerror(errno));
         
-        if (s->callbacks.connect_failed != NULL)
+        if (false && s->callbacks.connect_failed != NULL)
             s->callbacks.connect_failed(s, s->callbacks.ctx.connect_failed);
         
     }
