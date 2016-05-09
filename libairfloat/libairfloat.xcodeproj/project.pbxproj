@@ -120,7 +120,7 @@
 		A1CD9F2817076E6A0015CBBA /* webclientconnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = webclientconnection.h; sourceTree = "<group>"; };
 		A1CD9F2917076E720015CBBA /* webclientconnection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = webclientconnection.c; sourceTree = "<group>"; };
 		A1CF856416F3C02B009114B2 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		A1D0DC501950378A004717F5 /* libairfloat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libairfloat.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1D0DC501950378A004717F5 /* liblibairfloat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibairfloat.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D0DCAB19504234004717F5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A1D490BF16D4EB000082AFDD /* rtpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rtpsocket.c; sourceTree = "<group>"; };
 		A1D490C016D4EB000082AFDD /* rtpsocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rtpsocket.h; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		4898F9EF13CDAAD1006EC97E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1D0DC501950378A004717F5 /* libairfloat.a */,
+				A1D0DC501950378A004717F5 /* liblibairfloat.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -445,7 +445,7 @@
 			);
 			name = libairfloat;
 			productName = libairfloat;
-			productReference = A1D0DC501950378A004717F5 /* libairfloat.a */;
+			productReference = A1D0DC501950378A004717F5 /* liblibairfloat.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */

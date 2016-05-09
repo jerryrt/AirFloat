@@ -55,7 +55,7 @@
 @property (nonatomic, strong) IBOutlet UIView *containerView;
 @property (nonatomic, strong) IBOutlet UIButton* supportButton;
 @property (nonatomic, strong) IBOutlet UIButton* settingsButton;
-@property (nonatomic, strong) IBOutlet AirFloatAdView* adView;
+//@property (nonatomic, strong) IBOutlet AirFloatAdView* adView;
 @property (nonatomic, strong) IBOutlet UIView* topView;
 @property (nonatomic, strong) IBOutlet UIView* bottomView;
 @property (nonatomic, strong) IBOutlet UIImageView* artworkImageView;
@@ -209,7 +209,7 @@ void newServerSession(raop_server_p server, raop_session_p new_session, void* ct
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    self.adView = nil;
+//    self.adView = nil;
     self.topView = self.bottomView = nil;
     self.artworkImageView = nil;
     self.trackTitelLabel = self.artistNameLabel = nil;
@@ -233,10 +233,10 @@ void newServerSession(raop_server_p server, raop_session_p new_session, void* ct
     
     if (server) {
         raop_server_set_new_session_callback(server, newServerSession, self);
-        [self.adView startAnimation];
-    } else
-        [self.adView stopAnimation];
-    
+//        [self.adView startAnimation];
+    } else {
+//        [self.adView stopAnimation];
+    }
     _server = server;
     [self didChangeValueForKey:@"server"];
     
@@ -260,10 +260,10 @@ void newServerSession(raop_server_p server, raop_session_p new_session, void* ct
     
     [super viewDidLoad];
     
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
-        [self.adView setImages:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"]]];
-    else
-        [self.adView setImages:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Images~ipad" ofType:@"plist"]]];
+//    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)
+//        [self.adView setImages:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"]]];
+//    else
+//        [self.adView setImages:[NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Images~ipad" ofType:@"plist"]]];
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
         self.artworkImageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -298,7 +298,7 @@ void newServerSession(raop_server_p server, raop_session_p new_session, void* ct
     
     [super viewDidUnload];
     
-    self.adView = nil;
+//    self.adView = nil;
     self.topView = self.bottomView = nil;
     self.artworkImageView = nil;
     self.trackTitelLabel = self.artistNameLabel = nil;
@@ -324,8 +324,9 @@ void newServerSession(raop_server_p server, raop_session_p new_session, void* ct
     
     [super viewDidAppear:animated];
     
-    if (self.server)
-        [self.adView startAnimation];
+    if (self.server) {
+//        [self.adView startAnimation];
+    }
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -508,7 +509,7 @@ void newServerSession(raop_server_p server, raop_session_p new_session, void* ct
                          self.artworkImageView.alpha = 1.0;
                      } completion:nil];
     
-    [self.adView stopAnimation];
+//    [self.adView stopAnimation];
     
     self.trackTitelLabel.text = self.artistNameLabel.text = nil;
     
@@ -554,7 +555,7 @@ void newServerSession(raop_server_p server, raop_session_p new_session, void* ct
                          _albumTitle = nil;
                      }];
     
-    [self.adView startAnimation];
+//    [self.adView startAnimation];
     
     [self updateNowPlayingInfoCenter];
     

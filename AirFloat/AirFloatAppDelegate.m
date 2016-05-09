@@ -31,7 +31,7 @@
 #import <libairfloat/audioqueue.h>
 #import <libairfloat/raopserver.h>
 
-#import "AppViewController.h"
+#import "NewMainUIViewController.h"
 
 #import "AirFloatAppDelegate.h"
 
@@ -102,7 +102,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.appViewController = [[[AppViewController alloc] init] autorelease];
+    self.appViewController = [[[NewMainUIViewController alloc] init] autorelease];
     
     self.window = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
     

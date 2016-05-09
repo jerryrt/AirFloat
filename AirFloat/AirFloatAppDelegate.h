@@ -30,7 +30,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AppViewController.h"
+#import "NewMainUIViewController.h"
 
 #import <libairfloat/raopserver.h>
 
@@ -44,7 +44,7 @@
 }
 
 @property (nonatomic, strong) UIWindow *window;
-@property (nonatomic, strong) AppViewController* appViewController;
+@property (nonatomic, strong) NewMainUIViewController* appViewController;
 @property (nonatomic, assign) raop_server_p server;
 @property (nonatomic, strong) NSDictionary* settings;
 
